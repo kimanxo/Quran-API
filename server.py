@@ -10,7 +10,7 @@ app = FastAPI()
 
 
 
-
+#Disabling The CORS To Make The API Publicly Accessible
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -26,12 +26,12 @@ app.add_middleware(
 
 
 base_url = "https://mp3quran.net/eng"
-
+# The Home Endpoint
 @app.get('/')
 def home():
     return _responses.RedirectResponse('/docs')
 
-
+# The Surah's Endpoint - Data Stores Locally Since It Would Slow The Server Down If it's Scrapped 
 @app.get('/surahs')
 def get_Surahs():
     surahs = {
@@ -153,7 +153,7 @@ def get_Surahs():
     return surahs
 
 
-
+# The Readers Endpoint - Readers Fetched Using BS4 Web Scrapping From an External Website.
 @app.get('/readers')
 def get_readers():
     base_soup = bs(r.get(base_url).text,'lxml')
@@ -166,7 +166,7 @@ def get_readers():
         readers_groupped.append(readers_group_item)
 
 
-
+    # Collecting and Storing The Readers Names And Codes 
     readers_names = []
     readers_codes = []
     readers = {}
@@ -181,7 +181,7 @@ def get_readers():
 
     return {"Reader : Code":readers}
 
-
+# Get Surah Link Endpoint - Links Are Auto-Fetched(scrapped also :))  Based On The Users Specified Reader&Surah IDs. 
 @app.get('/get-surah-link')
 def get_surah_link(reader_code: str, surah_code: int):
 
@@ -194,6 +194,7 @@ def get_surah_link(reader_code: str, surah_code: int):
     except:
         raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
                             detail={'msg':'Invalid Reader Code / Surah Code'})
+# Server Prefrences learn more at 'https://fastapi.tiangolo.com/tutorial/'        
 if __name__ == '__main__':
     uvicorn.run(app,port=8000,host='127.0.0.1')
 
