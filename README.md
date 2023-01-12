@@ -27,3 +27,4 @@
 <p><b>Hint:</b> You Can Set ${HOST} to <code>host='0.0.0.0'</code> to make it accessible all across the LAN, this way anyone can access the server by refrencing your machine's local ip address.</p>
 <h2>Licence & Usage & Distribution: </h2>
 <p>This Project is Open Source And Free To Use And Distribute, And It Has No Copyrights Restrictions.</p>
+<small>Made With Love By <b>Ismail Saadaoui</b> That Goes Under The Username: <b>Kimanxo</b>.</small>
