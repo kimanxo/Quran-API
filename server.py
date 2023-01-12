@@ -4,7 +4,7 @@ from fastapi import FastAPI, status, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 import itertools
 import starlette.responses as _responses
-
+import uvicorn
 
 app = FastAPI()
 
@@ -194,5 +194,6 @@ def get_surah_link(reader_code: str, surah_code: int):
     except:
         raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
                             detail={'msg':'Invalid Reader Code / Surah Code'})
-
+if __name__ == '__main__':
+    uvicorn.run(app,port=8000,host='127.0.0.1')
 
