@@ -4,13 +4,16 @@
 <li>All Quran Surah's</li>
 <li>Many Readers</li>
 <li>Tottaly Free</li>
+<li>Multi Lang Support</li>
 </ul>
 <h2>Endpoints</h2>
 <ul>
 <li>'/' : Home Page With An Interactive SwaggerUI Documentation</li>
-<li>'surahs' : Get A List Of All Availaible Surah's, Each With Its ID Code </li>
-<li>'readers' : Get A List Of All Availaible Readers, Each With His ID Code </li>
-<li>'get-surah-link' : Get A Direct Link to The Specified Surah With The Specified Readers (IDs Requires) </li>
+<li>'/langs' : Get A List Of The Available Languages </li>
+<li>'/surahs' : Get A List Of All Availaible Surah's, Each With Its ID Code </li>
+<li>'/readers' : Get A List Of All Availaible Readers, Each With His ID Code </li>
+<li>'/reader_surahs' : Get The Available Surahs For a Specific Reader </li>
+<li>'/get_surah_link' : Get A Direct Link to The Specified Surah With The Specified Readers (IDs Requires) </li>
 </ul>
 <h2>Instalation</h2>
 <p>Clone The Project Repo By Executing These These CLI Commands:</p>
