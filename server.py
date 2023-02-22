@@ -1,4 +1,3 @@
-from bs4 import BeautifulSoup as bs
 import requests as r
 from fastapi import FastAPI, status, HTTPException,Request
 from fastapi.middleware.cors import CORSMiddleware
@@ -88,7 +87,7 @@ def readers(lang:str):
             }) 
         return readers
         
-
+# Get Available Surahs for s Specific Reader
 @app.get("/reader_surahs")
 def reader_surahs(lang:str,reader_id:int):
     
