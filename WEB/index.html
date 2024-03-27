@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="
+    QuranAPI is a featured, free, fast and easy to use API. It comprehensively provides a long list of available Receiters (+200), the full Holly Quran(114 surahs) are available with the voice of almost all the Receiters. The surahs are provided in small compressed MP3 files with a high quality audio.
+    "
+    />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+      integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>Quran API</title>
+  </head>
+  <body>
+    <nav>
+      <div class="slogan">QuranAPI.</div>
+      <div class="navs">
+        <a
+          class="link"
+          href="https://github.com/kimanxo/Quran-API"
+          target="_blank"
+          title="github"
+          ><i class="fa-brands fa-github github"></i
+        ></a>
+        <li class="link">Donate</li>
+        <li class="link">Contact</li>
+      </div>
+    </nav>
+    <header id="main">
+      <h1>Quran API</h1>
+
+      <div class="container">
+        <div class="pix">
+          <img src="left.svg" alt="quran image" />
+          <img src="right.svg" alt="quran image" />
+        </div>
+        <div class="desc">
+          <p>
+            QuranAPI is a featured, free, fast and easy to use API. It
+            comprehensively provides a long list of available Receiters (+200),
+            the full Holly Quran(114 surahs) are available with the voice of
+            almost all the Receiters. The surahs are provided in small
+            compressed MP3 files with a high quality audio.
+          </p>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <a href="#" target="_blank" id="tm">Telegram Bot</a>
+        <a href="https://api.quranapi.org/docs" target="_blank" id="docs"
+          >Check Docs</a
+        >
+      </div>
+    </header>
+    <main>
+      <div class="features" id="features">
+        <h1>Features</h1>
+        <div class="cards">
+          <div class="first2">
+            <div class="card">
+              <img src="fast.svg" alt="fast icon" />
+              <p>
+                Our service is rediculously fast, Try it out and see for
+                yourself.
+              </p>
+            </div>
+            <div class="card">
+              <img src="free.svg" alt="free icon" />
+              <p>
+                Our service is completely free of charge, not a single penny.
+              </p>
+            </div>
+          </div>
+
+          <div class="card middle">
+            <img src="secure.svg" alt="secure icon" />
+            <p>
+              Our service is widely accessible without cors or authentication.
+            </p>
+          </div>
+
+          <div class="last2">
+            <div class="card">
+              <img src="easy.svg" alt="easy icon" />
+              <p>
+                Our service is featured yet straight forward and so easy to use.
+              </p>
+            </div>
+            <div class="card">
+              <img src="interactive.svg" alt="interactive icon" />
+              <p>
+                Our service is nicely documented with highly interactive docs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="how_it_works" id="howItWorks">
+        <h1>How It Works?</h1>
+        <div class="endpoints">
+          <h2>End-Points:</h2>
+          <div class="details">
+            <ul>
+              <li>
+                <h4>Get Languages (<span class="route">/langs</span>):</h4>
+              </li>
+              <ul>
+                <li><span class="notion">Method:</span> GET</li>
+                <li><span class="notion">Parameters:</span> None</li>
+                <li>
+                  <span class="notion">Usage:</span> Use the provided codes to
+                  fetch data in the desired supported language.
+                </li>
+              </ul>
+            </ul>
+
+            <ul>
+              <li>
+                <h4>Get Surahs (<span class="route">/surahs</span>):</h4>
+              </li>
+              <ul>
+                <li><span class="notion">Method:</span> GET</li>
+                <li><span class="notion">Parameters:</span> str: lang_code</li>
+                <li>
+                  <span class="notion">Usage:</span> Use the provided codes to
+                  fetch surahs
+                </li>
+              </ul>
+            </ul>
+
+            <ul>
+              <li>
+                <h4>Get Readers (<span class="route">/readers</span>):</h4>
+              </li>
+              <ul>
+                <li><span class="notion">Method:</span> GET</li>
+                <li><span class="notion">Parameters:</span> str: lang_code</li>
+                <li>
+                  <span class="notion">Usage:</span> Use the provided codes to
+                  fetch readers's surahs
+                </li>
+              </ul>
+            </ul>
+
+            <ul>
+              <li>
+                <h4>
+                  Get Reader's Surahs (<span class="route">/reader_surahs</span
+                  >):
+                </h4>
+              </li>
+              <ul>
+                <li><span class="notion">Method:</span> GET</li>
+                <li>
+                  <span class="notion">Parameters:</span> [ str:lang_code,
+                  int:reader_id ]
+                </li>
+                <li>
+                  <span class="notion">Usage:</span> Use the provided codes to
+                  fetch the available surahs for each reader.
+                </li>
+              </ul>
+            </ul>
+
+            <ul>
+              <li>
+                <h4>
+                  Get Surah Link (<span class="route">/get_surah_link</span>):
+                </h4>
+              </li>
+              <ul>
+                <li><span class="notion">Method:</span> GET</li>
+                <li>
+                  <span class="notion">Parameters:</span> [str:lang_code,
+                  int:reader_code, int:surah_code]
+                </li>
+                <li>
+                  <span class="notion">Usage:</span> Use a combination of
+                  surah&reader codes to fetch the link.
+                </li>
+              </ul>
+            </ul>
+          </div>
+        </div>
+        <div class="requests">
+          <h2>Requests Samples:</h2>
+          <div class="details">
+            <span class="langs"
+              ><img src="langs.svg" alt="choose programming language"
+            /></span>
+            <div class="langs-con hide">
+              <img src="sh.svg" alt="" class="lang" data-lang="sh" />
+              <img src="php.svg" alt="" class="lang" data-lang="php" />
+              <img src="rb.svg" alt="" class="lang" data-lang="rb" />
+              <img src="py.svg" alt="" class="lang" data-lang="py" />
+              <img src="js.svg" alt="" class="lang" data-lang="js" />
+            </div>
+            <div class="editor">
+              <div class="utils">
+                <span class="util"></span>
+                <span class="util"></span>
+                <span class="util"></span>
+              </div>
+              <span class="lang-title"
+                ><img src="py.svg" id="lang-title" alt="selected language"
+              /></span>
+              <div class="snippets">
+                <div class="py">
+                  <code slot="code">
+                    import request <br />
+                    <br />
+                    # Get Langs <br />
+                    langs =
+                    requests.get('https://api.quranapi.org/langs').json()
+                    <br />
+                    <br />
+                    # Get Surahs <br />
+                    surahs =
+                    requests.get('https://api.quranapi.org/surahs?lang={code}').json()
+                    <br />
+                    <br />
+                    # Get Readers <br />
+                    readers =
+                    requests.get('https://api.quranapi.org/readers?lang={code}').json()
+
+                    <br />
+                    <br />
+                    # Get Reader Surahs <br />
+                    reader_surahs =
+                    requests.get(f'https://api.quranapi.org/reader_surahs/lang={code}&reader_id={id}').json()
+
+                    <br />
+                    <br />
+                    # Get Surah Link <br />
+                    link =
+                    requests.get(f'https://api.quranapi.org/get_surah_link/lang={code}&reader_id={id}&surah_id={id}').json()
+
+                    <br />
+                  </code>
+                </div>
+                <div class="rb">
+                  <code slot="code">
+                    require 'net/http' <br />
+                    <br />
+                    #Get Langs <br />
+                    url = URI('https://api.quranapi.org/langs') <br /><br />
+                    langs = Net::HTTP.get_response(url)<br /><br />
+                    # Get Surahs <br />
+                    url = URI('https://api.quranapi.org/surahs?lang={code}')
+                    <br /><br />
+                    surahs = Net::HTTP.get_response(url)<br /><br />
+                    # Get Readers <br />
+                    url = URI('https://api.quranapi.org/readers?lang={code}')<br /><br />
+                    readers = Net::HTTP.get_response(url)<br /><br />
+                    # Get Reader Surahs <br />
+                    url =
+                    URI('https://api.quranapi.org/reader_surahs/lang={code}&reader_id={id}')<br /><br />
+                    reader surahs = Net::HTTP.get_response(url)<br /><br />
+                    # Get Surah Link <br />
+                    url =
+                    URI('https://api.quranapi.org/get_surah_link/lang={code}&reader_id={id}&surah_id={id}')<br /><br />
+                    link = Net::HTTP.get_response(url)<br />
+                  </code>
+                </div>
+                <div class="php">
+                  <code slot="code">
+                    //Get Langs <br />
+                    $url = "https://api.quranapi.org/langs";<br />
+                    $langs = file_get_contents($url);<br /><br />
+                    //Get Surahs <br />
+                    $url = "https://api.quranapi.org/surahs?lang={code}";<br />
+                    $surahs = file_get_contents($url);<br /><br />
+                    //Get Readers <br />
+                    $url = "https://api.quranapi.org/readers?lang={code}";<br />
+                    $readers = file_get_contents($url);<br /><br />
+                    //Get Reader Surahs <br />
+                    $url =
+                    "https://api.quranapi.org/reader_surahs/lang={code}/reader_id{id}";<br />
+                    $reader surahs = file_get_contents($url);<br /><br />
+                    //Get Surah Link<br />
+                    $url =
+                    "https://api.quranapi.org/get_surah_link/lang={code}&reader_id={id}&surah_id={id}";<br /><br />
+                    $link = file_get_contents($url);<br /><br />
+                  </code>
+                </div>
+                <div class="sh">
+                  <code>
+                    # Get Langs <br />
+                    curl https://api.quranapi.org/langs <br />
+                    <br />
+                    # Get Surahs <br />
+                    curl https://api.quranapi.org/surahs?lang={code} <br />
+                    <br />
+                    # Get Readers <br />
+                    curl https://api.quranapi.org/readers?lang={code}<br />
+                    <br />
+                    #Get Reader Surahs <br />
+                    curl
+                    https://api.quranapi.org/reader_surahs/lang={code}&reader_id={id}<br />
+                    <br />
+                    #Get Surah Link <br />
+                    curl
+                    https://api.quranapi.org/get_surah_link/lang={code}&reader_id={id}&surah_id={id}<br />
+                    <br />
+                  </code>
+                </div>
+                <div class="js">
+                  <code>
+                    const axios = require('axios') <br />
+                    <br />
+                    // Get Langs <br />
+                    const langs =
+                    axios.get('https://api.quranapi.org/langs').then(r =>
+                    console.log(r.data)) <br /><br />
+                    // Get Surahs <br />
+                    const surahs =
+                    axios.get('https://api.quranapi.org/surahs?lang={code}').then(r
+                    => console.log(r.data)) <br /><br />
+                    // Get Readers <br />
+                    const readers =
+                    axios.get('https://api.quranapi.org/readers?lang={code}').then(r
+                    => console.log(r.data)) <br /><br />
+                    // Get Reader Surahs <br />
+                    const reader_surahs =
+                    axios.get('https://api.quranapi.org/reader_surahs/lang={code}&reader_id={id}')<br />
+                    .then(r => console.log(r.data))
+                    <br /><br />
+                    // Get Surah Link <br />
+                    const link =
+                    axios.get('https://api.quranapi.org/get_surah_link/lang={code}&reader_ide={id}&surah_id={id}')<br />
+                    .then(r => console.log(r.data))
+                  </code>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="responses">
+          <h2>Responses Samlpes:</h2>
+          <div class="editor">
+            <div class="tabs">
+              <button class="tab" data-tab="languages">Langs</button>
+              <button class="tab clicked" data-tab="surahs">Surahs</button>
+              <button class="tab" data-tab="readers">Readers</button>
+              <button class="tab" data-tab="reader_surahs">
+                Reader Surahs
+              </button>
+              <button class="tab" data-tab="links">Link</button>
+            </div>
+
+            <div class="surahs response">
+              <code>
+                [ {<br />
+                "id": 1,<br />
+                "name": "Al-Fatihah ",<br />
+                "makkiah": 1<br />
+                },<br />
+                {<br />
+                "id": 2,<br />
+                "name": "Al-Baqarah ",<br />
+                "makkiah": 0<br />
+                }<br />,....]
+              </code>
+            </div>
+            <div class="readers off response">
+              <code>
+                [<br />
+                {<br />
+                "id": 123,<br />
+                "name": "Hussain Alshaik",<br />
+                "surahs": "13,14,22,32,38,44,45,49,50,78,79,80,81,82,85"<br />
+                },<br />
+                {<br />
+                "id": 128,<br />
+                "name": "Wasel Almethen",<br />
+                "surahs": "8,9,36,38,42,45,50,59,60"<br />
+                },<br />
+                ...]
+              </code>
+            </div>
+            <div class="reader_surahs off response">
+              <code>
+                {
+                <br />
+                [1, 2, 3, 8, 12, 13, 25, 33, 41, 58, 66, 81, 103, 114 ]<br />
+                }
+              </code>
+            </div>
+            <div class="links off response">
+              <code>
+                {
+                <br />
+                "link":"https://server12.mp3quran.net/download/maher/001.mp3"<br />
+                }
+              </code>
+            </div>
+            <div class="languages links off response">
+              <code>
+                {<br />
+                "Arabic": "ar",<br />
+                "English": "eng",<br />
+                "French": "fr",<br />
+                "Russian": "ru",<br />
+                "German": "de",<br />
+                "Spanish": "es",<br />
+                "Turkish": "tr",<br />
+                "Chineese": "cn",<br />
+                "Farsi": "fa",<br />
+                "Portuese": "pt",<br />
+                "sweedish": "sw"<br />
+                }
+              </code>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about" id="about">
+        <h1>About</h1>
+        <div class="dev">
+          <div class="header">
+            <img src="dev.svg" alt="developper photo" />
+            <div class="job_name">
+              <span class="name">Ismail Saadaoui</span>
+              <span class="job">Full Stack Web Dev</span>
+            </div>
+          </div>
+          <div class="desc">
+            <p>
+              Hey There! <br />
+              My name is Ismail Saadaoui, I'm a passionate junior full stack web
+              developper, I make Beautiful and Modern websites using
+              Tailwind.css, Interactive and Smooth using React.js, Secure,
+              Powerfull and Scalable using Django.py .<br />
+              Wait no more to let me bring your ideas to life !
+            </p>
+            <div class="mobdev">
+              <img src="mobdev.svg" alt="programming art image" />
+            </div>
+          </div>
+          <div class="btns">
+            <button class="dev_hire">Hire Me</button>
+            <button class="dev_support">Support Me</button>
+          </div>
+        </div>
+
+        <div class="dev">
+          <div class="header">
+            <img src="des.svg" alt="designer photo" />
+            <div class="job_name">
+              <span class="name">DJUX</span>
+              <span class="job">UI/UX Designer</span>
+            </div>
+          </div>
+          <div class="desc">
+            <p>
+              Hey There! <br />
+              My name is Djoudi Med Amine, I'm a passionate junior Ui/UX
+              Designer, I make Intuitive Mindblowing designs using Figma And
+              AdobeXD, I'm also concerned when it comes to all other design
+              types such as logos and cards. <br />
+              Wait no more to let me bring your ideas into prescriptive !
+            </p>
+            <div class="mobdev">
+              <img src="mobdes.svg" alt="web design art image" />
+            </div>
+          </div>
+          <div class="btns">
+            <button class="des_hire">Hire Me</button>
+            <button class="des_support">Support Me</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer">
+        <span class="slogan">QuranAPI</span>
+        <ul class="navlinks">
+          <li class="navlinksTitle">Navigation</li>
+          <li class="navlink"><a href="#main">Main </a></li>
+          <li class="navlink"><a href="#features">Features </a></li>
+          <li class="navlink"><a href="#howItWorks">How It Works?</a></li>
+          <li class="navlink">
+            <a href="https://api.quranapi.org/docs" target="_blank">Docs </a>
+          </li>
+          <li class="navlink"><a href="#about">About </a></li>
+        </ul>
+        <ul class="contacts">
+          <li class="navlinksTitle">Contacts</li>
+          <li class="contact">
+            <a href="https://www.fiverr.com/kimanxo_313" target="_blank"
+              >Developper
+            </a>
+          </li>
+          <li class="contact">
+            <a href="https://www.fiverr.com/the_aminoz" target="_blank"
+              >Designer
+            </a>
+          </li>
+        </ul>
+        <ul class="socials">
+          <li class="navlinksTitle">Socials</li>
+          <li class="social">
+            <a href="https://t.me/Qur4nBot" target="_blank">Telegram Bot </a>
+          </li>
+        </ul>
+      </div>
+      <div class="copyrights">
+        Copyrights &copy; <span id="year"></span>, All Rights Reserved.
+      </div>
+    </footer>
+  </body>
+</html>

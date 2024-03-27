@@ -1,0 +1,674 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+  background-color: rgba(213, 213, 213, 1);
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+
+
+nav {
+  width: 90%;
+  margin: auto;
+  height: 3rem;
+  /* background-color: rgba(30, 39, 44, 0.6); */
+  padding: 0.25rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgba(69, 90, 100, 1);
+}
+
+.slogan {
+  font-weight: bolder;
+}
+
+.navs {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.github {
+  font-size: 1rem;
+  color: rgba(69, 90, 100, 1);
+}
+
+header {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 4rem;
+}
+
+header h1 {
+  text-align: center;
+  padding: 2rem 0 2rem 0;
+  color: rgba(30, 39, 44, 1);
+}
+header .pix img:first-child {
+  transform: translate(30%, 20%);
+}
+
+header .pix {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6rem;
+}
+
+header .desc p {
+  text-align: left;
+  padding: 0 2rem;
+  color: rgba(55, 71, 79, 1);
+}
+
+header .desc p::selection {
+  background-color: rgba(55, 71, 79, 1);
+  color: rgba(213, 213, 213, 1);
+}
+
+header .buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem 0;
+  gap: 10px;
+}
+
+#tm {
+  text-decoration: none;
+  padding: 1rem 2rem;
+  background-color: rgba(30, 39, 44, 0.6);
+  color: aliceblue;
+  border-radius: 6px;
+}
+
+#docs {
+  text-decoration: none;
+  padding: 1rem 2rem;
+  color: rgba(30, 39, 44, 0.6);
+  background-color: transparent;
+  border-radius: 6px;
+  border: 2px solid rgba(30, 39, 44, 0.6);
+}
+
+main {
+  width: 90%;
+  margin: auto;
+}
+
+.features h1 {
+  text-align: center;
+  padding: 2rem 0;
+  margin-bottom: 4rem;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  position: relative;
+}
+
+.card img {
+  width: 2rem;
+  height: 2rem;
+}
+
+.card p {
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.card p::selection {
+  color: rgba(213, 213, 213, 1);
+  background-color: rgba(38, 50, 56, 1);
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  width: 35%;
+
+  background: linear-gradient(
+    112.6deg,
+    rgba(239, 239, 239, 0.6),
+    rgba(239, 239, 239, 0.1) 86.89%
+  );
+  backdrop-filter: blur(25px);
+  border-radius: 6px;
+  transition: all 2s;
+  color: rgba(38, 50, 56, 1);
+}
+
+.card img {
+  width: 2rem;
+  height: 2rem;
+}
+
+.card p {
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.first2,
+.last2 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.middle {
+  margin: auto;
+}
+
+.how_it_works {
+  margin: 4rem auto;
+  width: 100%;
+}
+
+h1::selection,h2::selection{
+  background-color: black;
+  color: rgba(213, 213, 213, 1);
+}
+
+.how_it_works h1 {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.endpoints h2 {
+  text-align: left;
+}
+
+.endpoints .details {
+  padding: 1rem;
+  background: linear-gradient(
+    112.6deg,
+    rgba(239, 239, 239, 0.6),
+    rgba(239, 239, 239, 0.1) 86.89%
+  );
+  backdrop-filter: blur(25px);
+  border-radius: 6px;
+  margin-bottom: 4rem;
+  color: rgba(30, 39, 44, 1);
+}
+
+.endpoints h4 {
+  color: rgba(30, 39, 44, 1);
+}
+.route {
+  opacity: 0.6;
+}
+
+.notion {
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: rgba(30, 39, 44, 1);
+}
+
+.editor::-webkit-scrollbar{
+  display: none;
+}
+
+.requests h2 {
+  text-align: left;
+}
+
+.requests .details {
+  border-radius: 6px;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.requests .editor {
+  background-color: rgba(38, 50, 56, 1);
+  border-radius: 6px;
+  padding: 4rem 1rem 3rem 1rem;
+  margin: auto;
+  overflow-x: scroll;
+}
+
+.langs {
+  position: absolute;
+  right: 0.5rem;
+  bottom: 30%;
+  cursor: pointer;
+  z-index: 10;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+.langs img {
+  animation: pulse 1s infinite;
+  width: 2.5rem;
+  cursor: pointer;
+}
+
+.langs-con {
+  width: 8rem;
+  height: 8rem;
+  position: absolute;
+  right: 3.1rem;
+  bottom: 20%;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  transition: ease-in 0.3s;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.blur {
+  opacity: 0.1;
+}
+
+.langs-con img {
+  position: inherit;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
+
+.langs-con img:hover {
+  transform: scale(1.2, 1.2);
+}
+
+.langs-con img:first-child {
+  top: 0;
+  left: 40%;
+}
+
+.langs-con img:nth-child(2) {
+  top: 15%;
+  left: 12%;
+}
+
+.langs-con img:nth-child(3) {
+  top: 45%;
+  left: 8%;
+}
+
+.langs-con img:nth-child(4) {
+  top: 73%;
+  left: 20%;
+}
+
+.langs-con img:last-child {
+  top: 85%;
+  left: 45%;
+}
+
+.requests .utils {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 60px;
+  height: 20px;
+}
+
+.util {
+  border-radius: 50%;
+  background-color: rgb(82, 245, 82);
+  height: 1rem;
+  width: 1rem;
+}
+
+.util:first-child {
+  background-color: rgb(214, 58, 58);
+}
+
+.util:last-child {
+  background-color: goldenrod;
+}
+
+.editor .lang-title {
+  position: absolute;
+  top: 10px;
+  left: 45%;
+  font-weight: bold;
+  font-size: 1rem;
+  color: whitesmoke;
+}
+
+.editor code {
+  color: white;
+}
+
+.editor code::selection {
+  color:  rgba(38, 50, 56, 1);
+  background-color: white;
+}
+
+
+
+.rb,
+.php,
+.sh,
+.js {
+  display: none;
+  width: 90%;
+}
+.py {
+  width: 90%;
+}
+
+.responses .editor {
+  background-color: rgba(38, 50, 56, 1);
+  border-radius: 6px;
+  position: relative;
+  padding: 1rem;
+  margin: auto;
+  overflow-x: scroll;
+}
+
+.responses .tabs::-webkit-scrollbar{
+  display: none;
+}
+
+.responses .tabs{
+  scrollbar-width: none;
+}
+
+.responses .tabs {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 10%;
+  overflow-x: scroll;
+}
+
+.responses .tab {
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  background-color: rgba(77, 83, 86, 1);
+  color: white;
+  cursor: pointer;
+  width: auto;
+}
+
+.responses::-webkit-scrollbar{
+  display: none;
+}
+
+.clicked {
+  background-color: rgba(217, 217, 217, 1) !important;
+  color: rgba(34, 42, 43, 1) !important;
+}
+
+.off {
+  display: none;
+}
+
+.about {
+  margin: 6rem auto;
+}
+.about h1 {
+  text-align: center;
+}
+
+.dev {
+  background-color: rgba(38, 50, 56, 1);
+  padding: 2rem;
+  border-radius: 6px;
+  margin-bottom: 4rem;
+}
+.dev .header {
+  display: flex;
+  justify-content: start;
+  gap: 1rem;
+}
+
+.dev img {
+  width: 5rem;
+  height: auto;
+}
+
+.dev .header img{
+  border-radius: 50%;
+}
+
+.dev .header .job_name {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.name {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.job {
+  color: rgba(116, 116, 116, 1);
+}
+
+.dev p {
+  color: white;
+}
+
+.dev p::selection{
+  color: rgba(38, 50, 56, 1);
+  background-color: white;
+}
+
+.mobdev {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.mobdev img {
+  width: 10rem;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+.dev .btns {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+}
+
+.dev .btns button {
+  text-decoration: none;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  color: white;
+  width: 35%;
+  height: 3rem;
+  background-color: rgba(55, 71, 79, 1);
+  border: 2px solid rgba(55, 71, 79, 1);
+  cursor: pointer;
+}
+
+.dev button:last-child {
+  color: white;
+  background-color: transparent;
+  border: 2px solid white;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: rgba(38, 50, 56, 1);
+  color: white;
+  text-align: left;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 90%;
+  margin: auto;
+}
+
+
+.footer a::selection{
+  color:rgba(38, 50, 56, 1);
+  background-color: white;
+
+}
+
+.footer .slogan {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.slogan::selection{
+  color:rgba(38, 50, 56, 1);
+  background-color: white;
+
+}
+
+
+
+.footer ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.navlinksTitle {
+  transform: scale(1.05, 1.05);
+}
+
+.navlinksTitle::selection{
+  color:rgba(38, 50, 56, 1);
+  background-color: white;
+
+}
+
+.footer a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.826);
+  font-family: "Roboto" sans-serif;
+  font-size: 1rem;
+}
+
+.copyrights {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+  width: 100%;
+  margin: auto;
+  background-color: rgb(18, 27, 31);
+}
+
+@media screen and (min-width: 720px) {
+  header .container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  header .desc {
+    width: 40%;
+  }
+
+  header .pix {
+    width: 40%;
+    padding-top: 2rem;
+  }
+  header .buttons {
+    justify-content: center;
+    gap: 8rem;
+  }
+  .dev .desc {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+  }
+  .dev .desc p {
+    width: 50%;
+    line-height: 1.3rem;
+  }
+  .dev .btns button {
+    width: 25%;
+    font-size: 1.3rem;
+  }
+  .responses .tabs button {
+    padding: 1rem 3rem;
+  }
+  nav,
+  .links {
+    font-size: 1.3rem;
+    gap: 1.5rem;
+  }
+  .github {
+    font-size: 1.7rem;
+  }
+  .features .cards p {
+    font-size: 1.2rem;
+  }
+  .endpoints li {
+    font-size: 1.2rem;
+  }
+  .notion {
+    font-size: 1.2rem;
+  }
+  .card {
+    width: 27%;
+  }
+}
+
+@media screen and (min-width: 860px) {
+  header .desc p {
+    line-height: 1.7rem;
+    font-size: 1.3rem;
+  }
+  .dev .desc p {
+    line-height: 1.7rem;
+    font-size: 1.3rem;
+  }
+  .dev .desc img {
+    width: 14rem;
+  }
+  .footer .slogan {
+    display: flex;
+  }
+  footer {
+    font-size: 1.2rem;
+  }
+  .card {
+    width: 20%;
+  }
+}
